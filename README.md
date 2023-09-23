@@ -1,1 +1,1 @@
-# HTML-CSS-JavaScript-exercises
+# Mini Calculator using HTML-CSS-JavaScript
