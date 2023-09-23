@@ -4,90 +4,14 @@
         <title>Mini Calculator</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <style>
-            .container{
-                background-color: #a1936f;
-                border: 3px groove black;
-                max-width:250px;
-                height:300px;
-                border-radius: 10px;
-                z-index: 1;
-
-            }
-            .calculator{
-                padding: 8px;
-            }
-            input[type="text"]{
-                background-color: lightgray;
-                border: 2px double black;
-                margin: 10px;
-                outline: 2px solid grey;
-                width:200px;
-                height:40px;
-                font-size: 20px;
-                text-align: right;
-
-            }
-            input[type="button"]:hover{
-                opacity: 1.0;
-                font-size: 15px;
-            }
-            .ac{
-                background-color:#3399ff;
-                opacity:0.7;
-                border: 1px solid black;
-                margin: 1px 2px;
-                width:50px;
-                height:40px;
-                cursor:pointer;
-            }
-            .del{
-                background-color: #ff6666;
-                border: 1px solid black;
-                margin: 1px 2px;
-                width:50px;
-                height:40px;
-                cursor:pointer;
-                opacity:0.7;
-
-            }
-            .equal{
-                background-color:aqua;
-                border: 1px solid black;
-                margin: 1px 2px;
-                width:50px;
-                height:40px;
-                cursor:pointer;
-                opacity:0.7;
-
-            }
-            .symbols{
-                background-color:#66ff66;
-                border: 1px solid black;
-                margin: 1px 2px;
-                width:50px;
-                height:40px;
-                cursor:pointer;
-                padding: 1px;
-                opacity:0.7;
-            }
-            .numbers{
-                border: 1px solid black;
-                margin: 1px 2px;
-                width:50px;
-                height:40px;
-                cursor:pointer;
-                opacity:0.7;
-
-            }
-        </style>
+        <link rel="stylesheet" href="style.css"/>
     </head>
     <body>
         <div class="container">
             <div class="calculator">
                 <form>
                     <div class="display">
-                        <input type="text" name="display" placeholder="0" disabled>
+                        <input type="text" name="display" id="display" placeholder="0" disabled>
                     </div>
                     <div>
                         <input type="button" value="AC" onclick="display.value = ''" class="ac">
@@ -115,45 +39,13 @@
                     </div>
                     <div>
                         <input type="button" value="0" onclick="display.value += '0'" class="numbers">
-                        <input type="button" value="SQRT" onclick="display.value = Math.sqrt(eval(display.value))" class="symbols">
-                        <input type="button" value="LOG10" onclick="display.value = Math.log10(eval(display.value))" class="symbols">
-                        <input type="button" value="=" onclick="display.value = eval(display.value)" class="equal">
+                        <input type="button" value="SQRT" onclick="sqrt()" class="symbols">
+                        <input type="button" value="LOG10" onclick="log10()" class="symbols">
+                        <input type="button" value="=" onclick="equal()" class="equal">
                     </div>
                 </form>
             </div>
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        <script src="function.js"></script>
     </body>
 </html>
